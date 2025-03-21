@@ -29,7 +29,16 @@ if (!defined('ABSPATH')) {
                     <tr>
                         <td><?php echo esc_html($vendor['name']); ?></td>
                         <td><?php echo esc_html($vendor['api_endpoint']); ?></td>
-                        <td><?php echo esc_html(substr($vendor['api_key'], 0, 4) . str_repeat('*', strlen($vendor['api_key']) - 4)); ?></td>
+                        <td>
+                            <?php 
+                            $api_key = $vendor['api_key'];
+                            if (strlen($api_key) > 4) {
+                                echo esc_html(substr($api_key, 0, 4) . str_repeat('*', max(0, strlen($api_key) - 4)));
+                            } else {
+                                echo esc_html($api_key ?: 'N/A'); // Show full key if short, or 'N/A' if empty
+                            }
+                            ?>
+                        </td>
                         <td><?php echo $vendor['is_active'] ? __('Active', 'wc-jpm') : __('Inactive', 'wc-jpm'); ?></td>
                         <td>
                             <form method="post" action="" style="display:inline;">
@@ -84,7 +93,6 @@ if (!defined('ABSPATH')) {
     // Handle vendor actions
     global $wpdb;
 
-    // Add Vendor (handled in WC_JPM_Settings::save_settings())
     // Toggle Vendor Active Status
     if (isset($_POST['wc_jpm_toggle_vendor']) && check_admin_referer('wc_jpm_toggle_vendor_' . $_POST['vendor_id'], 'wc_jpm_toggle_vendor_nonce')) {
         $vendor_id = intval($_POST['vendor_id']);
