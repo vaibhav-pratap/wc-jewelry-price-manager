@@ -1,0 +1,148 @@
+/* WooCommerce Jewelry Price Manager - Admin Styles */
+
+/* General Admin Section Styling */
+.wc-jpm-admin-section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+
+.wc-jpm-admin-section h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #23282d;
+}
+
+.wc-jpm-admin-section h3 {
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+    color: #0073aa;
+}
+
+.wc-jpm-admin-section p {
+    color: #666;
+}
+
+/* Analytics Dashboard */
+.wc-jpm-analytics-chart {
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.wc-jpm-analytics-chart canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Audit Log */
+.wc-jpm-admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wc-jpm-admin-section table th,
+.wc-jpm-admin-section table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.wc-jpm-admin-section table th {
+    background: #f7f7f7;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.wc-jpm-admin-section table td pre {
+    margin: 0;
+    padding: 5px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+/* Vendor Settings and Pricing Rules */
+.wc-jpm-admin-section .form-table {
+    margin: 0 0 20px;
+}
+
+.wc-jpm-admin-section .form-table th {
+    width: 200px;
+    padding: 10px 0;
+}
+
+.wc-jpm-admin-section .form-table td {
+    padding: 10px 0;
+}
+
+.wc-jpm-admin-section .form-table input[type="text"],
+.wc-jpm-admin-section .form-table input[type="url"],
+.wc-jpm-admin-section .form-table input[type="number"],
+.wc-jpm-admin-section .form-table select {
+    width: 300px;
+    max-width: 100%;
+}
+
+.wc-jpm-admin-section .form-table .description {
+    color: #777;
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+/* Buttons */
+.wc-jpm-admin-section .button {
+    margin-right: 10px;
+}
+
+.wc-jpm-admin-section .button-primary {
+    background: #0073aa;
+    border-color: #006799;
+}
+
+.wc-jpm-admin-section .button-primary:hover {
+    background: #006799;
+    border-color: #005c87;
+}
+
+.wc-jpm-admin-section .button-secondary {
+    background: #f7f7f7;
+    border-color: #ccc;
+    color: #555;
+}
+
+.wc-jpm-admin-section .button-secondary:hover {
+    background: #eee;
+    border-color: #bbb;
+}
+
+/* Notices */
+.wc-jpm-admin-section .notice {
+    margin: 20px 0 0;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    .wc-jpm-admin-section .form-table th,
+    .wc-jpm-admin-section .form-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .wc-jpm-admin-section .form-table input[type="text"],
+    .wc-jpm-admin-section .form-table input[type="url"],
+    .wc-jpm-admin-section .form-table input[type="number"],
+    .wc-jpm-admin-section .form-table select {
+        width: 100%;
+    }
+
+    .wc-jpm-admin-section table th,
+    .wc-jpm-admin-section table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
